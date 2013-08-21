@@ -40,14 +40,20 @@
 		img #banner {
 		    max-width: 450px;
 		}
+        }
 
 		#selected_locale select[disabled] {
 		    opacity:.5 !important;
 		}
 
-		}
-		
-		
+        .form_output {	
+            text-transform: uppercase;
+            font-family: 'Comic Sans', 'Comic Sans MS';
+        }
+        #form_completed_text {
+            font-size: bigger;
+        }
+
 		</style>
     </head>
     <body>
@@ -67,7 +73,7 @@
             <label for="four">Noun</label>
                 <input type="text" class="nsa_input" name="four" id="nsa_input_4" />
                 <br/>
-            <label for="five">Verb 9/11</label>
+            <label for="five">Verb</label>
                 <input type="text" class="nsa_input" name="five" id="nsa_input_5" />
                 <br/>
             <label for="six">Action Verb</label>
@@ -83,19 +89,22 @@
                 <input type="submit" value="Let's play NSA Mad-Libs!"></input>
 
         </form>
-        <p id="nsa_completed" style="display:none;">
+        <p id="form_completed_text" style="display:none;">
             The new language proposed by the government would allow the FBI to
-            <span class="nsa_output" id="nsa_output_1"></span>
-            <span class="nsa_output" id="nsa_output_2"></span>
-            <span class="nsa_output" id="nsa_output_3"></span>.
+            <span class="form_output" id="nsa_output_1"></span>
+            <span class="form_output" id="nsa_output_2"></span>
+            <span class="form_output" id="nsa_output_3"></span>
             The Government has advised the Court that this change was prompted by the fact that
-            <span class="nsa_output" id="nsa_output_4"></span>.
-            <span class="nsa_output" id="nsa_output_5"></span>.
+            <span class="form_output" id="nsa_output_4"></span>
+            <span class="form_output" id="nsa_output_5"></span>
+            <span class="form_output">
+                 9/11
+            </span>.
             Nevertheless, The current procedures require the FBI to
-            <span class="nsa_output" id="nsa_output_6"></span>.
+            <span class="form_output" id="nsa_output_6"></span>
             The change is intended to eliminate the requirement of
-            <span class="nsa_output" id="nsa_output_7"></span>.
-            <span class="nsa_output" id="nsa_output_8"></span>.
+            <span class="form_output" id="nsa_output_7"></span>
+            <span class="form_output" id="nsa_output_8"></span>
         </p>
         <a href="#" onclick="reset_madlib(); return false;" style="display:none;" id="mad_lib_reset">
             Try again?
@@ -114,17 +123,23 @@
                         $('#nsa_input_' + (i+1)).val()
                     );
                 }
-                $('#nsa_completed').show();
+                $('#form_completed_text').show();
                 $('#mad_lib_reset').show();
+                nsa_form.hide();
+                $('#nsa_photo_essay').show();
             }
             var reset_madlib = function() {
                 $('#nsa_completed').hide();
                 $('#mad_lib_reset').hide();
+                nsa_form.show();
                 for ( var i = 0; i < number_of_inputs; i++) {
                     $('#nsa_input_' + (i+1)).val('');
                 }
             }
         </script>
+        <div id="nsa_photo_essay">
+            <!-- put photo essay here-->
+        </div>
         <!-- END COPY HERE -->
     </body>
 </html>
