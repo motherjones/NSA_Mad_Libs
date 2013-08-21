@@ -84,7 +84,7 @@
             </div>
 
             <div class="label_input_combo"> 
-                <label for="two">Present-tense verb <span class="prompt">e.g., "running"</span></label>
+                <label for="two">Action verb</label>
                     <input type="text" class="nsa_input" name="two" id="nsa_input_2" />
             </div>
 
@@ -94,28 +94,64 @@
             </div>
 
             <div class="label_input_combo"> 
-            <label for="four">Noun</label>
+            <label for="four">Preposition</label>
                 <input type="text" class="nsa_input" name="four" id="nsa_input_4" />
             </div>
 
             <div class="label_input_combo"> 
-            <label for="five">Verb</label>
+            <label for="five">Adjective</label>
                 <input type="text" class="nsa_input" name="five" id="nsa_input_5" />
             </div>
 
             <div class="label_input_combo"> 
-            <label for="six">Verb</label>
+            <label for="six">Plural Noun</label>
                 <input type="text" class="nsa_input" name="six" id="nsa_input_6" />
             </div>
 
             <div class="label_input_combo"> 
-            <label for="seven">Action verb (ending in -ing)</label>
+            <label for="seven">Noun</label>
                 <input type="text" class="nsa_input" name="seven" id="nsa_input_7" />
             </div>
 
             <div class="label_input_combo"> 
-            <label for="eight">Noun</label>
+            <label for="eight">Verb</label>
                 <input type="text" class="nsa_input" name="eight" id="nsa_input_8" />
+            </div>
+
+
+            <div class="label_input_combo"> 
+            <label for="nine">Adverb</label>
+                <input type="text" class="nsa_input" name="nine" id="nsa_input_9" />
+            </div>
+
+
+            <div class="label_input_combo"> 
+            <label for="ten">Verb</label>
+                <input type="text" class="nsa_input" name="ten" id="nsa_input_10" />
+            </div>
+
+
+            <div class="label_input_combo"> 
+            <label for="eleven">Verb</label>
+                <input type="text" class="nsa_input" name="eleven" id="nsa_input_11" />
+            </div>
+
+
+            <div class="label_input_combo"> 
+            <label for="twelve">Verb</label>
+                <input type="text" class="nsa_input" name="twelve" id="nsa_input_12" />
+            </div>
+
+
+            <div class="label_input_combo"> 
+            <label for="thirteen">Verb that ends in -ing</label>
+                <input type="text" class="nsa_input" name="thirteen" id="nsa_input_13" />
+            </div>
+
+
+            <div class="label_input_combo"> 
+            <label for="fourteen">Noun</label>
+                <input type="text" class="nsa_input" name="fourteen" id="nsa_input_14" />
             </div>
 
 
@@ -127,24 +163,36 @@
             <span class="form_output" id="nsa_output_1"></span>
             <span class="form_output" id="nsa_output_2"></span>
             <span class="form_output" id="nsa_output_3"></span>.
-            The Government has advised the Court that this change was prompted by the fact that
             <span class="form_output" id="nsa_output_4"></span>
             <span class="form_output" id="nsa_output_5"></span>
+            <span class="form_output" id="nsa_output_6"></span>.
+            The Government has advised the Court that this change was prompted by the fact that
+            <span class="form_output" id="nsa_output_7"></span>
+            <span class="form_output" id="nsa_output_8"></span>.
             <span class="form_output">
                  9/11
             </span>.
             Nevertheless, The current procedures require the FBI to
-            <span class="form_output" id="nsa_output_6"></span>.
+            <span class="form_output" id="nsa_output_9"></span>.
+            <span class="form_output" id="nsa_output_10"></span>.
+            <span class="form_output">
+                and
+            </span>
+            <span class="form_output" id="nsa_output_11"></span>.
+            <span class="form_output">
+                and also
+            </span>
+            <span class="form_output" id="nsa_output_12"></span>.
             The change is intended to eliminate the requirement of
-            <span class="form_output" id="nsa_output_7"></span>
-            <span class="form_output" id="nsa_output_8"></span>.
+            <span class="form_output" id="nsa_output_13"></span>.
+            <span class="form_output" id="nsa_output_14"></span>.
         </p>
         <a href="#" onclick="reset_madlib(); return false;" style="display:none;" id="mad_lib_reset">
             More madness?
         </a>
 		</section>
         <script>
-            var number_of_inputs = 8;
+            var number_of_inputs = 14;
             var nsa_form = $('#nsa_form');
             nsa_form.submit(function() {
                 nsa_mad_lib();
