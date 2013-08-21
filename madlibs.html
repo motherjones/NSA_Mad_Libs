@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- START COPY HERE -->
+        <img src="http://assets.motherjones.com/interactives/projects/2013/08/nsa_redacted.png"/>
+        <form id="nsa_form" onsubmit="nsa_mad_lib(); return false;">
+            <label for="one">Adverb</label>
+                <input type="text" class="nsa_input" name="one" id="nsa_input_1" />
+                <br/>
+            <label for="two">Action Verb</label>
+                <input type="text" class="nsa_input" name="two" id="nsa_input_2" />
+                <br/>
+            <label for="three">Plural Noun</label>
+                <input type="text" class="nsa_input" name="three" id="nsa_input_3" />
+                <br/>
+            <label for="four">Noun</label>
+                <input type="text" class="nsa_input" name="four" id="nsa_input_4" />
+                <br/>
+            <label for="five">Verb 9/11</label>
+                <input type="text" class="nsa_input" name="five" id="nsa_input_5" />
+                <br/>
+            <label for="six">Action Verb</label>
+                <input type="text" class="nsa_input" name="six" id="nsa_input_6" />
+                <br/>
+            <label for="seven">Action Verb Ending in -ing</label>
+                <input type="text" class="nsa_input" name="seven" id="nsa_input_7" />
+                <br/>
+            <label for="eight">Noun</label>
+                <input type="text" class="nsa_input" name="eight" id="nsa_input_8" />
+                <br/>
+
+                <input type="submit" value="Let's play NSA Mad-Libs!"></input>
+
+        </form>
+        <p id="nsa_completed" style="display:none;">
+            The new language proposed by the government would allow the FBI to
+            <span class="nsa_output" id="nsa_output_1"></span>
+            <span class="nsa_output" id="nsa_output_2"></span>
+            <span class="nsa_output" id="nsa_output_3"></span>.
+            The Government has advised the Court that this change was prompted by the fact that
+            <span class="nsa_output" id="nsa_output_4"></span>.
+            <span class="nsa_output" id="nsa_output_5"></span>.
+            Nevertheless, The current procedures require the FBI to
+            <span class="nsa_output" id="nsa_output_6"></span>.
+            The change is intended to eliminate the requirement of
+            <span class="nsa_output" id="nsa_output_7"></span>.
+            <span class="nsa_output" id="nsa_output_8"></span>.
+        </p>
+        <a href="#" onclick="reset_madlib(); return false;" style="display:none;" id="mad_lib_reset">
+            Try again?
+        </a>
+        <script>
+            var number_of_inputs = 8;
+            var nsa_form = $('nsa_form');
+            nsa_form.submit(function() {
+                nsa_mad_lib();
+                return false;
+            });
+            var nsa_mad_lib = function() {
+                for ( var i = 0; i < number_of_inputs; i++) {
+                    $('#nsa_output_' + (i+1)).text(
+                        $('#nsa_input_' + (i+1)).val()
+                    );
+                }
+                $('#nsa_completed').show();
+                $('#mad_lib_reset').show();
+            }
+            var reset_madlib = function() {
+                $('#nsa_completed').hide();
+                $('#mad_lib_reset').hide();
+                for ( var i = 0; i < number_of_inputs; i++) {
+                    $('#nsa_input_' + (i+1)).val('');
+                }
+            }
+        </script>
+        <!-- END COPY HERE -->
+    </body>
+</html>
