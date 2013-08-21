@@ -12,7 +12,10 @@
 			padding:10px;
 			background-color: #FEE758;
 		}
-
+        #calculator .label_input_combo{
+            width: 50%;
+            float: left;
+        }
 		label {
 			display:block;
 			margin-top:1.2em;
@@ -61,30 +64,46 @@
 		<section id="calculator">
         <img id="banner" src="http://assets.motherjones.com/interactives/projects/2013/08/nsa/banner/nsa-mad-libs-banner.png"/>
         <form id="nsa_form" onsubmit="nsa_mad_lib(); return false;">
+            <div class="label_input_combo"> 
             <label for="one">Adverb</label>
                 <input type="text" class="nsa_input" name="one" id="nsa_input_1" />
-                <br/>
+            </div>
+
+            <div class="label_input_combo"> 
             <label for="two">Verb</label>
                 <input type="text" class="nsa_input" name="two" id="nsa_input_2" />
-                <br/>
+            </div>
+
+            <div class="label_input_combo"> 
             <label for="three">Plural noun</label>
                 <input type="text" class="nsa_input" name="three" id="nsa_input_3" />
-                <br/>
+            </div>
+
+            <div class="label_input_combo"> 
             <label for="four">Noun</label>
                 <input type="text" class="nsa_input" name="four" id="nsa_input_4" />
-                <br/>
+            </div>
+
+            <div class="label_input_combo"> 
             <label for="five">Verb</label>
                 <input type="text" class="nsa_input" name="five" id="nsa_input_5" />
-                <br/>
+            </div>
+
+            <div class="label_input_combo"> 
             <label for="six">Verb</label>
                 <input type="text" class="nsa_input" name="six" id="nsa_input_6" />
-                <br/>
+            </div>
+
+            <div class="label_input_combo"> 
             <label for="seven">Action verb (ending in -ing)</label>
                 <input type="text" class="nsa_input" name="seven" id="nsa_input_7" />
-                <br/>
+            </div>
+
+            <div class="label_input_combo"> 
             <label for="eight">Noun</label>
                 <input type="text" class="nsa_input" name="eight" id="nsa_input_8" />
-                <br/>
+            </div>
+
 
                 <input type="submit" value="Hit me!"></input>
 
