@@ -16,12 +16,13 @@
             width: 50%;
             float: left;
         }
-		label {
+
+		#calculator label {
 			display:block;
 			margin-top:1.2em;
 		}
 
-		select, #input, #calculate {
+		#calculator select, #input, #calculate {
 			margin-bottom:1.2em;
 		   	padding: 5px;
 		   	font-size: 1em;
@@ -32,6 +33,11 @@
 			color:#101010;
 		}
 
+        #calculator #calculator_submit {
+            margin-top: 1em;
+            font-size:2em;
+        }
+
 		@media only screen 
 		and (max-width: 480px) {
 
@@ -40,38 +46,46 @@
 		    max-width:430px;
 		}
 
-		img #banner {
+		#calculator img #banner {
 		    max-width: 450px;
 		}
         }
 
-		#selected_locale select[disabled] {
+		#calculator #selected_locale select[disabled] {
 		    opacity:.5 !important;
 		}
 
-        .form_output {	
+        #calculator .form_output {	
             text-transform: uppercase;
             font-family: 'Comic Sans', 'Comic Sans MS';
         }
-        #form_completed_text {
+
+        #calculator #form_completed_text {
             font-size: bigger;
+        }
+
+		#calculator .prompt {
+            font-size: smaller;
+			color: #666;
+			font-style: italic;
         }
 
 		</style>
     </head>
     <body>
         <!-- START COPY HERE -->
+		<img id="banner" src="http://assets.motherjones.com/interactives/projects/2013/08/nsa/banner/nsa-mad-libs-banner.png"/>
 		<section id="calculator">
-        <img id="banner" src="http://assets.motherjones.com/interactives/projects/2013/08/nsa/banner/nsa-mad-libs-banner.png"/>
         <form id="nsa_form" onsubmit="nsa_mad_lib(); return false;">
+
             <div class="label_input_combo"> 
-            <label for="one">Adverb</label>
-                <input type="text" class="nsa_input" name="one" id="nsa_input_1" />
+                <label for="one">Adverb <span class="prompt">e.g., "quickly"</span></label>
+                    <input type="text" class="nsa_input" name="one" id="nsa_input_1" />
             </div>
 
             <div class="label_input_combo"> 
-            <label for="two">Verb</label>
-                <input type="text" class="nsa_input" name="two" id="nsa_input_2" />
+                <label for="two">Present-tense verb <span class="prompt">e.g., "running"</span></label>
+                    <input type="text" class="nsa_input" name="two" id="nsa_input_2" />
             </div>
 
             <div class="label_input_combo"> 
@@ -105,7 +119,7 @@
             </div>
 
 
-                <input type="submit" value="Hit me!"></input>
+            <input id="calculator_submit" type="submit" value="Hit me!"></input>
 
         </form>
         <p id="form_completed_text" style="display:none;">
