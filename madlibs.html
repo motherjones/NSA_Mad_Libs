@@ -23,7 +23,7 @@
 		}
 		
         #calculator .label_input_combo{
-            width: 300px;
+            width: 296px;
             float: left;
         }
 
@@ -45,7 +45,8 @@
 
         #calculator #calculator_submit {
             margin-top: 1em;
-
+            clear: both;
+            display: block;
         }
 
 		@media only screen 
@@ -165,7 +166,7 @@
                 <input type="text" class="nsa_input" name="fourteen" id="nsa_input_14" />
             </div>
 
-
+            <div style="display:block; clear: both; height:1px"></div>
             <input id="calculator_submit" type="submit" value="Hit me!"></input>
 
         </form>
@@ -221,7 +222,7 @@
                 $('#nsa_photo_essay').show();
             }
             var reset_madlib = function() {
-                $('#nsa_completed').hide();
+                $('#form_completed_text').hide();
                 $('#mad_lib_reset').hide();
                 nsa_form.show();
                 for ( var i = 0; i < number_of_inputs; i++) {
