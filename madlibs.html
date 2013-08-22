@@ -10,11 +10,20 @@
 			color:#292929;
 			width:96.9%;
 			max-width:625px;
-			padding:10px;
 			background-color: #eee;
 		}
+		
+		#calculator img {
+			text-align: center;
+			width: 100%;
+		}
+		
+		#calculator form {
+			padding: 10px;
+		}
+		
         #calculator .label_input_combo{
-            width: 50%;
+            width: 300px;
             float: left;
         }
 
@@ -36,7 +45,7 @@
 
         #calculator #calculator_submit {
             margin-top: 1em;
-            font-size:2em;
+
         }
 
 		@media only screen 
@@ -75,8 +84,9 @@
     </head>
     <body>
         <!-- START COPY HERE -->
-		<img id="banner" src="http://assets.motherjones.com/interactives/projects/2013/08/nsa/banner/nsa-mad-libs-banner.png"/>
+		
 		<section id="calculator">
+		<img id="banner" src="http://assets.motherjones.com/interactives/projects/2013/08/nsa/banner/nsa-mad-libs-banner.png"/>
         <form id="nsa_form" onsubmit="nsa_mad_lib(); return false;">
 
             <div class="label_input_combo"> 
