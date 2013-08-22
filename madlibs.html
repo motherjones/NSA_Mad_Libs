@@ -75,6 +75,7 @@
             text-transform: uppercase;
             font-family: 'Comic Sans', 'Comic Sans MS';
 			font-weight: bold;
+			padding: 10px;
         }
 
         #calculator #form_completed_text {
@@ -85,6 +86,10 @@
             font-size: smaller;
 			color: #666;
 			font-style: italic;
+        }
+
+		#calculator #more-media {
+            margin-top: 10px;
         }
 
 		</style>
@@ -204,7 +209,7 @@
             The change is intended to eliminate the requirement of
             <span class="form_output" id="nsa_output_13"></span>
             <span class="form_output" id="nsa_output_14"></span>.
-            <img src="http://assets.motherjones.com/interactives/projects/2013/08/nsa_redacted.png"/>
+            <img id="more-media" src="http://assets.motherjones.com/interactives/projects/2013/08/nsa_redacted.png"/>
         </p>
         <a href="#" onclick="reset_madlib(); return false;" style="display:none;" id="mad_lib_reset">
             More madness?
