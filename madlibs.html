@@ -100,81 +100,82 @@
 		<section id="calculator">
 		<img id="banner" src="http://assets.motherjones.com/interactives/projects/2013/08/nsa/banner/nsa-mad-libs-banner.png"/>
         <form id="nsa_form" onsubmit="nsa_mad_lib(); return false;">
+            <input id="calculator_submit" type="submit" value="No way am i filling out a form!"></input>
 
             <div class="label_input_combo"> 
                 <label for="one">Adverb <span class="prompt">e.g., "quickly"</span></label>
-                    <input type="text" class="nsa_input" name="one" id="nsa_input_1" />
+                    <input placeholder="ThISS IS A palceahaolder" type="text" class="nsa_input" name="one" id="nsa_input_1" />
             </div>
 
             <div class="label_input_combo"> 
                 <label for="two">Present-tense verb <span class="prompt">e.g., "run"</span></label>
-                    <input type="text" class="nsa_input" name="two" id="nsa_input_2" />
+                    <input placeholder="" type="text" class="nsa_input" name="two" id="nsa_input_2" />
             </div>
 
             <div class="label_input_combo"> 
             <label for="three">Plural noun <span class="prompt">e.g., "trees"</span></label>
-                <input type="text" class="nsa_input" name="three" id="nsa_input_3" />
+                <input placeholder="" type="text" class="nsa_input" name="three" id="nsa_input_3" />
             </div>
 
             <div class="label_input_combo"> 
             <label for="four">Preposition <span class="prompt">e.g., "into"</span></label>
-                <input type="text" class="nsa_input" name="four" id="nsa_input_4" />
+                <input placeholder="" type="text" class="nsa_input" name="four" id="nsa_input_4" />
             </div>
 
             <div class="label_input_combo"> 
             <label for="five">Adjective <span class="prompt">e.g., "happy"</span></label>
-                <input type="text" class="nsa_input" name="five" id="nsa_input_5" />
+                <input placeholder="" type="text" class="nsa_input" name="five" id="nsa_input_5" />
             </div>
 
             <div class="label_input_combo"> 
             <label for="six">Plural Noun <span class="prompt">e.g., "bunnies"</span></label>
-                <input type="text" class="nsa_input" name="six" id="nsa_input_6" />
+                <input placeholder="" type="text" class="nsa_input" name="six" id="nsa_input_6" />
             </div>
 
             <div class="label_input_combo"> 
             <label for="seven">Government agency <span class="prompt">e.g., "DOJ"</span></label>
-                <input type="text" class="nsa_input" name="seven" id="nsa_input_7" />
+                <input placeholder="" type="text" class="nsa_input" name="seven" id="nsa_input_7" />
             </div>
 
             <div class="label_input_combo"> 
             <label for="eight">Past-tense verb ending in -ed <span class="prompt">e.g., "cried"</span></label>
-                <input type="text" class="nsa_input" name="eight" id="nsa_input_8" />
+                <input placeholder="" type="text" class="nsa_input" name="eight" id="nsa_input_8" />
             </div>
 
 
             <div class="label_input_combo"> 
             <label for="nine">Adverb <span class="prompt">e.g., "warmly"</span></label>
-                <input type="text" class="nsa_input" name="nine" id="nsa_input_9" />
+                <input placeholder="" type="text" class="nsa_input" name="nine" id="nsa_input_9" />
             </div>
 
 
             <div class="label_input_combo"> 
             <label for="ten">Verb <span class="prompt">e.g., "haunt"</span></label>
-                <input type="text" class="nsa_input" name="ten" id="nsa_input_10" />
+                <input placeholder="" type="text" class="nsa_input" name="ten" id="nsa_input_10" />
             </div>
 
 
             <div class="label_input_combo"> 
             <label for="eleven">Verb <span class="prompt">e.g., "leap"</span></label>
-                <input type="text" class="nsa_input" name="eleven" id="nsa_input_11" />
+                <input placeholder="" type="text" class="nsa_input" name="eleven" id="nsa_input_11" />
             </div>
 
 
             <div class="label_input_combo"> 
             <label for="twelve">Present-tense verb <span class="prompt">e.g., "run"</span></label>
-                <input type="text" class="nsa_input" name="twelve" id="nsa_input_12" />
+                <input placeholder="" type="text" class="nsa_input" name="twelve" id="nsa_input_12" />
             </div>
 
 
             <div class="label_input_combo"> 
             <label for="thirteen">Acting verb ending in -ing <span class="prompt">e.g., "tossing"</span></label>
-                <input type="text" class="nsa_input" name="thirteen" id="nsa_input_13" />
+                <input placeholder="" type="text" class="nsa_input" name="thirteen" id="nsa_input_13" />
             </div>
 
 
             <div class="label_input_combo"> 
             <label for="fourteen">Plural noun <span class="prompt">e.g., "kitties"</span></label>
-                <input type="text" class="nsa_input" name="fourteen" id="nsa_input_14" />
+                <input placeholder="" type="text" class="nsa_input" name="fourteen" id="nsa_input_14" />
             </div>
 
             <div style="display:block; clear: both; height:1px"></div>
@@ -226,6 +227,8 @@
                 for ( var i = 0; i < number_of_inputs; i++) {
                     $('#nsa_output_' + (i+1)).text(
                         $('#nsa_input_' + (i+1)).val()
+                            ?  $('#nsa_input_' + (i+1)).val()
+                            :  $('#nsa_input_' + (i+1)).attr('placeholder')
                     );
                 }
                 $('#form_completed_text').show();
